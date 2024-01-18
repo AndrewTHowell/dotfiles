@@ -14,8 +14,20 @@ to be used with `stow`.
 To deploy this to a new machine, run 
 
 ```
-# Untested directly inserting to config, but local testing shows it doesn't overwrite other directories in .config, it just writes nvim
-stow .config -t ~/.config -vv 
-stow .config -t $XDG_CONFIG_HOME/.config -vv 
+-- <path-to-config> examples:
+-- - ~
+-- - $HOME
+-- - $XDG_CONFIG_HOME
+stow -t <path-to-config>/.config -vv -S .config
+```
+
+To redeploy changes to this machine, run 
+
+```
+-- <path-to-config> examples:
+-- - ~
+-- - $HOME
+-- - $XDG_CONFIG_HOME
+stow -t <path-to-config>/.config -vv -R .config
 ```
 
