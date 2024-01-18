@@ -20,7 +20,7 @@ vim.keymap.set("n", "<leader>svwm", function()
 end)
 ]]--
 
-vim.keymap.set("x", "<leader>p", "\"_dP", {desc = "Pastes text A over text B, preserving A for future pastes"})
+--vim.keymap.set("x", "<leader>p", "\"_dP", {desc = "Pastes text A over text B, preserving A for future pastes"})
 vim.keymap.set({"n", "v"}, "<leader>d", "\"_d", {desc = "Deletes text B with text A copied, preserving A for future pastes"})
 
 vim.keymap.set({"n", "v"}, "<leader>y", "\"+y", {desc = "Sends next selection to clipboard"})
