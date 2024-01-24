@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, {desc = "Project View: view the current directory"})
 
 -- Highlighted text can be moved up or down
@@ -20,7 +22,7 @@ vim.keymap.set("n", "<leader>svwm", function()
 end)
 ]]--
 
---vim.keymap.set("x", "<leader>p", "\"_dP", {desc = "Pastes text A over text B, preserving A for future pastes"})
+vim.keymap.set("x", "<leader>p", "\"_dP", {desc = "Pastes text A over text B, preserving A for future pastes"})
 vim.keymap.set({"n", "v"}, "<leader>d", "\"_d", {desc = "Deletes text B with text A copied, preserving A for future pastes"})
 
 vim.keymap.set({"n", "v"}, "<leader>y", "\"+y", {desc = "Sends next selection to clipboard"})
