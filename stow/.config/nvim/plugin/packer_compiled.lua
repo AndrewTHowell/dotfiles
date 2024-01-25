@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/ahowell/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["cheatsheet.nvim"] = {
+    loaded = true,
+    path = "/home/ahowell/.local/share/nvim/site/pack/packer/start/cheatsheet.nvim",
+    url = "https://github.com/sudormrfbin/cheatsheet.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/ahowell/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -158,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ahowell/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/ahowell/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["rose-pine"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
