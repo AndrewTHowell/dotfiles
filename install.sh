@@ -3,6 +3,7 @@
 case $OSTYPE in
 	linux-gnu)
 		echo 'Linux'
+		sudo apt-get install cmake
 		;;
 	*)
 		printf 'Unsupported OS: %s\n' $OSTYPE >&2
