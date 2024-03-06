@@ -22,8 +22,9 @@ fi
 sudo apt upgrade git
 
 git config --global gpg.format ssh
-git config --global commit.gpgsign true
 git config --global user.signingkey ~/.ssh/${ssh_filename}.pub
+git config --global commit.gpgsign true
+git config --global gpg.ssh.allowedSignersFile "~/.config/git/allowed_signers"
 
 #test
 
