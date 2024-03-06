@@ -21,6 +21,10 @@ fi
 # Git
 sudo apt upgrade git
 
+git config --global gpg.format ssh
+git config --global commit.gpgsign true
+git config --global user.signingkey ~/.ssh/${ssh_filename}.pub
+
 
 # Install curl? (The --output-dir option is available since curl 7.73.0)
 
