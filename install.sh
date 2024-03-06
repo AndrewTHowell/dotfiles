@@ -25,6 +25,8 @@ git config --global gpg.format ssh
 git config --global commit.gpgsign true
 git config --global user.signingkey ~/.ssh/${ssh_filename}.pub
 
+#test
+
 
 # Install curl? (The --output-dir option is available since curl 7.73.0)
 
