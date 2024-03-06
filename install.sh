@@ -1,6 +1,26 @@
 #!/usr/bin/env bash
 
-# Install Git from source (get version with Signing, git>=2.3)
+sudo apt update
+
+# SSH
+ssh_filename="id_ed25519"
+if ! [ -f ~/.ssh/$ssh_filename ]; then
+  echo "Cannot detect SSH key, generating a new one."
+
+  ssh-keygen -t ed25519 -f ~/.ssh/$ssh_filename -N '' -C "andrewthomashowell@gmail.com" <<< y >/dev/null 2>&1
+
+  # Ensure ssh-agent is running
+  eval "$(ssh-agent -s) >/dev/null"
+
+  ssh-add ~/.ssh/$ssh_filename
+
+  echo "SSH key generated. The public key is '$(cat ~/.ssh/${ssh_filename}.pub)'"
+fi
+
+
+# Git
+sudo apt upgrade git
+
 
 # Install curl? (The --output-dir option is available since curl 7.73.0)
 
