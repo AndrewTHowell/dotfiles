@@ -31,17 +31,11 @@ git config --global commit.gpgsign true
 git config --global gpg.ssh.allowedSignersFile "~/.config/git/allowed_signers"
 git config --global user.email "andrewthomashowell@gmail.com"
 
-
-# Install curl? (The --output-dir option is available since curl 7.73.0)
- 
-#NeoVim
+# NeoVim
 sudo mkdir -p /opt/neovim/src
 sudo git clone --depth 1 --branch stable https://github.com/neovim/neovim.git /opt/neovim/src
 sudo make -C /opt/neovim/src CMAKE_BUILD_TYPE=RelWithDebInfo CMAKE_INSTALL_PREFIX=/opt/neovim
 sudo make -C /opt/neovim/src install
-sudo ln -fsv /opt/neovim/bin/nvim /usr/local/bin/nvim
-
-# Install zsh?
 
 # Install Oh My Zsh
 
