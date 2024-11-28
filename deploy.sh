@@ -10,6 +10,5 @@ clone_or_pull() {
   fi
 }
 
-# Install the tmux plugin manager
-clone_or_pull https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 
