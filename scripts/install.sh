@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Major credit to https://github.com/marcuscaisey/.dotfiles
+
 # clone_or_pull <repo> <dir>
 # Checks if repo exists already. If not, clone it. If it does, pull it.
 clone_or_pull() {
