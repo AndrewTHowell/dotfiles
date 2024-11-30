@@ -6,6 +6,6 @@ This project aims to capture all configuration files I use and centralise them, 
 
 ```
 git clone https://github.com/AndrewTHowell/dotfiles ~/dotfiles
-sudo ~/dotfiles/scripts/install.sh
+~/dotfiles/scripts/install.sh
 ```
 

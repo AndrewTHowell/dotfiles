@@ -21,7 +21,7 @@ sudo apt install -y $pkgs
 
 echo "Installing fzf (apt version is outdated)"
 clone_or_pull https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install --completion --key-bindings --no-update-rc --no-bash
 # Add the following to zsh:
 ## Set up fzf key bindings and fuzzy completion
 #source <(fzf --zsh)
@@ -32,6 +32,16 @@ if [ ! -d ~/.oh-my-zsh ]; then
 else
     ZSH=~/.oh-my-zsh ~/.oh-my-zsh/tools/upgrade.sh
 fi
+
+echo "Installing fonts"
+sudo wget -P /usr/local/share/fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+sudo wget -P /usr/local/share/fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+sudo wget -P /usr/local/share/fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+sudo wget -P /usr/local/share/fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+fc-cache -fv
+
+echo "Installing Powerlevel10k"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
 echo "Installing tmux plugin manager"
 clone_or_pull https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
