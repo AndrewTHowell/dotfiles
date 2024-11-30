@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-stow --target ~ -vv --restow stow
+stow --target ~ --dir ~/dotfiles -vv --restow stow
