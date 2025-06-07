@@ -20,6 +20,7 @@ echo "Installing required packages: $packages"
 sudo apt install -y $pkgs
 
 # SSH
+echo "Setting up SSH"
 ssh_filename="id_ed25519"
 if ! [ -f ~/.ssh/$ssh_filename ]; then
   echo "Cannot detect SSH key, generating a new one."
@@ -36,6 +37,7 @@ fi
 
 
 # Git
+echo "Setting up Git"
 sudo apt upgrade git
 
 git config --global gpg.format ssh
@@ -43,6 +45,10 @@ git config --global user.signingkey ~/.ssh/${ssh_filename}.pub
 git config --global commit.gpgsign true
 git config --global gpg.ssh.allowedSignersFile "~/.config/git/allowed_signers"
 git config --global user.email "andrewthomashowell@gmail.com"
+
+echo "This machine's SSH key needs to be registered at Github. Run 'cat ~/.ssh/id_ed25519.pub'"
+xdg-open https://github.com/settings/keys
+echo "Once registered, test your SSH connection using 'ssh -T git@github.com'"
 
 echo "Installing fzf (apt version is outdated)"
 clone_or_pull https://github.com/junegunn/fzf.git ~/.fzf
